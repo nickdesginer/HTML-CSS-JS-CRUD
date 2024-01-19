@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H-C-J Crud</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body onload="startPage()">
+
+  <div class="form-container">
+    <p class="title" id="title">Create</p>
+    <div class="form">
+      <div class="input-group">
+        <label for="username">Name</label>
+        <input type="text" id="name" placeholder="Enter name">
+      </div>
+      <div class="input-group">
+        <label for="password">Email</label>
+        <input type="email" id="email" placeholder="Enter a email">
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone</label>
+        <input type="number" id="phone" placeholder="Enter a phone">
+      </div>
+      <button class="sign" id="sign" onclick="addData()">Create Data</button>
+      <button class="sign update" id="update" onclick="updateData()">Update Data</button>
+    </div>
+  </div>
+
+  <div class="container" id="lists">
+    <h1>List Data</h1>
+    <table class="rwd-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+      <tbody id="listData">
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card Successfully" id="Successfully">
+    <p>Data add Successfully...</p>
+  </div>
+  <div class="card Error" id="Error">
+    <p>Data deleted...</p>
+  </div>
+  <div class="card Warn" id="Warn">
+    <p>Data updated...</p>
+  </div>
+  <script src="./assets/script.js"></script>
+</body>
+
+</html>
